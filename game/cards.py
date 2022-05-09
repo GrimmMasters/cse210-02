@@ -7,13 +7,26 @@
 # deal out points
 import random
 
-class Die:
+class Card:
 
     def __init__(self):
         self.value = 0
         self.points = 0
 
-    def roll(self):
 
-        self.value = random.randint(1,6)
-        self.points = 50 if self.value == 5 else 100 if self.value == 1 else 0
+    def deal(self):
+
+        self.value = random.randint(1,13)
+
+    def Points(self, choice, Old_value):
+
+        if choice == 'h' and Old_value < self:
+            self.value = 100
+        elif choice == 'l' and Old_value > self:
+            self.value = 100
+        elif choice == 'l' or'h' and Old_value == self:
+            self.value = 0
+        else:
+            self.value = -75
+
+

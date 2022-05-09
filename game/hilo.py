@@ -3,6 +3,10 @@
 # Check if player wants to continue playing
 # have player 
 # initial function must start player with 300 pts
+
+#Alexander and Pume on initial and input
+
+
 from game.cards import Card
 
 
