@@ -18,15 +18,15 @@ class Card:
 
         self.value = random.randint(1,13)
 
-    def Points(self, choice, Old_value):
+    def points(self, choice, Old_value):
 
         if choice == 'h' and Old_value < self:
-            self.value = 100
+            self.points = 100
         elif choice == 'l' and Old_value > self:
-            self.value = 100
+            self.points = 100
         elif choice == 'l' or'h' and Old_value == self:
-            self.value = 0
+            self.points = 0
         else:
-            self.value = -75
+            self.points = -75
 
 
