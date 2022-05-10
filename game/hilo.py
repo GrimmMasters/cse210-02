@@ -8,6 +8,7 @@
 
 
 from game.cards import Card
+import random
 
 
 class Hilo:
@@ -19,9 +20,12 @@ class Hilo:
         self.total_score = 0
         self.old_value = 0
 
-        for i in range(5):
-            die = Die()
-            self.dice.append(die)
+#Start game by dealing out first card 
+        # card = list(range(0,14))
+        # for card in self.Card:
+        #     random.shuffle(card)
+        #     print (f"The card is: {card}")
+
 
     def start_game(self):
 
@@ -32,8 +36,9 @@ class Hilo:
 
     def get_inputs(self):
 
-        roll_dice = input("Roll dice? [y/n] ")
-        self.is_playing = (roll_dice == "y")
+        # self.guess = input("Higher or lower? [h/l] ")
+        deal_card = input("Play again? [y/n] ")
+        self.is_playing = (deal_card == "y")
        
     def do_updates(self, choice, ):
 
