@@ -40,7 +40,7 @@ class Hilo:
         deal_card = input("Play again? [y/n] ")
         self.is_playing = (deal_card == "y")
        
-    def do_updates(self, choice, ):
+    def do_updates(self, choice, old_value):
 
         if not self.is_playing:
             return 
