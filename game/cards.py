@@ -1,7 +1,5 @@
 
 # initial function must display a random card from 1-13 and set to some variable
-#
-# 
 # definition where the next card found
 # compare old number to new number with high or low
 # deal out points
@@ -15,8 +13,6 @@ class Card:
     self.card2 = 0
     self.guess = ""
     self.result = ""
-    
-    
     
   def h_l(self, old_val):
     self.card1 = old_val
@@ -35,30 +31,3 @@ class Card:
       self.result = "incorrect"
     
     return self.card2
-
-
-# import random
-
-# class Card:
-
-#     def __init__(self):
-#         self.value = 0
-#         self.points = 0
-
-
-#     def deal(self):
-
-#         self.value = random.randint(1,13)
-
-#     def points(self, choice, Old_value):
-
-#         if choice == 'h' and Old_value < self:
-#             self.points = 100
-#         elif choice == 'l' and Old_value > self:
-#             self.points = 100
-#         elif choice == 'l' or'h' and Old_value == self:
-#             self.points = 0
-#         else:
-#             self.points = -75
-
-
