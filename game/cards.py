@@ -18,8 +18,8 @@ class Card:
     
     
     
-  def h_l(self):
-    self.card1 = random.randint(1, 13)
+  def h_l(self, old_val):
+    self.card1 = old_val
     self.card2 = random.randint(1, 13)
     print(f"\nThe card is: {self.card1}")
     guess = input("Higher or lower? [h/l] ")
@@ -33,6 +33,8 @@ class Card:
       self.result = "correct"
     else:
       self.result = "incorrect"
+    
+    return self.card2
 
 
 # import random

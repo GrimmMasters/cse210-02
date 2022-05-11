@@ -66,7 +66,8 @@
     #     self.is_playing == (self.score > 0)
     
     # from unittest import result
-from game.cards import Cards
+from game.cards import Card
+import random
 
 # Card.h_l(result)
 # Hilo.give_points(Card.h_l(result))
@@ -76,11 +77,12 @@ class Hilo:
   def __init__(self):
     self.play_game = True
     
-    self.cards = Cards()
+    self.cards = Card()
     self.results = ""
     # self.game_in_play = True
     self.winner = None
     self.points = 300
+    self.old_val = random.randint(1, 13)
        
   def give_points(self):
     if self.cards.result == "correct":
@@ -93,12 +95,12 @@ class Hilo:
     return self.points
     
   def game_in_play(self, points):
-    while points > 0:
+    while points >= 0:
       if(self.play_game):
-        play = input("Play again? [y/n] ")
+        play = input("Wanna play? [y/n] ")
         if play == "y":
           self.play_game = True
-          self.cards.h_l()
+          self.old_val = self.cards.h_l(self.old_val)
           self.give_points()   
         else:
           self.play_game = False
