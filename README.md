@@ -31,8 +31,8 @@ Team Game
 
 # Authors 
 
-Logan McCauley
-Pumehana Cartagena
-Mitchelle Garrett
+Logan McCauley \
+Pumehana Cartagena \
+Mitchelle Garrett \
 Alexander Awbrey
 
