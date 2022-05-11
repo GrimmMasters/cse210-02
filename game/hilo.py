@@ -42,7 +42,7 @@ class Hilo:
             self.play_game = True
             continue
           else:
-            play == "n"
+            #play == "n"
             self.play_game = False
             print("\nThanks for playing.\n")
             
