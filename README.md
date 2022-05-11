@@ -13,6 +13,8 @@ Use and program from and IDE like visual studio code to run the game
 Start up your IDE of choice and open the project folder.
 Selece the __main__.py and click run
 
+When you finish playing make sure to close the terminal if you want to play again!
+
 # Structure
 ---
 The project is organzed as follows
