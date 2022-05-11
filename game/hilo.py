@@ -95,16 +95,17 @@ class Hilo:
     return self.points
     
   def game_in_play(self, points):
-    while points >= 0:
+    while points > 0:
       if(self.play_game):
         play = input("Wanna play? [y/n] ")
         if play == "y":
           self.play_game = True
           self.old_val = self.cards.h_l(self.old_val)
-          self.give_points()   
+          points = self.give_points()   
         else:
           self.play_game = False
           print("\nThanks for playing.\n")
       
     else: 
       print("0 points left. Game over!")   
+      return
